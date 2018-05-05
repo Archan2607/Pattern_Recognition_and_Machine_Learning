@@ -1,0 +1,77 @@
+\documentclass[12pt]{report}
+\usepackage{pgf}
+\usepackage{pgfpages}
+\usepackage{graphicx}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\pgfpagesdeclarelayout{boxed}
+{
+  \edef\pgfpageoptionborder{0pt}
+}
+{
+  \pgfpagesphysicalpageoptions
+  {%
+    logical pages=1,%
+  }
+  \pgfpageslogicalpageoptions{1}
+  {
+    border code=\pgfsetlinewidth{2pt}\pgfstroke,%
+    border shrink=\pgfpageoptionborder,%
+    resized width=.95\pgfphysicalwidth,%
+    resized height=.95\pgfphysicalheight,%
+    center=\pgfpoint{.5\pgfphysicalwidth}{.5\pgfphysicalheight}%
+  }%
+}
+
+\pgfpagesuselayout{boxed}
+
+
+\begin{document}
+
+\begin{titlepage}
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{Pattern Recognition and Machine Learning}\\
+      \Large\textbf{Assignment No. 5}\\
+      \large\textit{Archan Mehta (201711014)}
+      
+   \end{center}
+   \vspace*{\stretch{2.0}}
+\end{titlepage}
+
+\begin{center}
+\begin{enumerate}
+
+\item (1) Implement k-means clustering algorithm. Use IRIS data to evaluate performance of the
+algorithm.
+Compare your results with that of the in-built function.
+
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{}
+\caption{Python Code 1}
+\end{figure}
+
+
+\pagebreak
+
+\item (2) Implement Fuzzy c-means clustering algorithm. Use IRIS data to evaluate performance of the
+algorithm.
+Compare your results with that of the in-built function.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{}
+\caption{Python Code 2}
+\end{figure}
+
+
+\end{enumerate}
+\end{center}
+
+\end{document}
